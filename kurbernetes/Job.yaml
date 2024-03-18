@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: add-me-on-snapchat
+spec:
+  template:
+    spec:
+      containers:
+      - name: ubuntu
+        image: ubuntu
+        command: ["/bin/bash", "-c", "echo 'Auf Snapchat adden: dj.dav3'"]
+      restartPolicy: Never
+  backoffLimit: 4

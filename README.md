@@ -1,54 +1,44 @@
 # Klausur 2023 DHBW HDH
 
-## Setup
+## Erkläre in eigenen Worten:
+   ### Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
 
-### Klone dieses Repository
+Automatische Verwaltung
+   Ein Deployment kümmert sich um die automatische Erstellung, Löschung und Aktualisierung der Pods. 
+   Wenn man die Version aktualisieren möchte, kann das Deployment neue Pods mit der neuen Version starten und die alten nach und nach entfernen, ohne dass Downtime entsteht. 
+   Ein einzelner Pod bietet diese Art von Verwaltung oder Selbstheilung nicht.
 
-1. Klone das Repository
-    ```bash
-    git clone <TODO repo url>
-    cd klausur
-    git remote remove origin
-    ```
-2. Erstelle in der GitHub Organisation ein Repository mit dem Namen **\<vorname>.\<nachname>**
-3. Lade den Stand in das Repository hoch
-   ```bash
-   git remote add origin <url deines Repositories>
-   git push -u origin master
-   ```
-4. Erstelle einen Branch für die Bearbeitung
-   > Vergesse am Ende nicht deine Bearbeitung hochzuladen
+Skalierung
+   Man kann einfach Replikate erhöhen und verringern, je nachdem wie viele man benötigt.
+   inzelne Pods kann man nicht scalen.
 
-### Sicherstellen, dass alles geht
 
-Führe folgende Befehle in deinem Repository aus, um sicherzustellen, dass alles geht:
+   ### Wofür ein Kubernetes Service gut ist **(2 Punkte)**
 
-```bash
-npm install
+   Beständige Netzwerkadresse
+    Man bekommt eine beständige Adresse für den Zugriff auf andere Pods, auch bei Neustarts oder Ersetzungen.
 
-npm run dev
-```
+   Lastverteilung
+    Ein Service verteilt eingehende Anfragen automatisch auf alle Pods nach dem Round Robin Prinzip.
+    So werden die Pods nicht überlastet.
 
-## Aufgaben (20 Punkte)
 
-1. Installiere: **(3 Punkte)**
-   * ESLint
-   * Jest
-   * Prettier
-   > Die Config Dateien brauchen nicht angepasst werden
-   
-   > Denke auch an die nötigen Typescript dependencies
-2. Schreibe ein `Dockerfile`, dass dazu benutzt werden kann, die Seite zur Verfügung zu stellen **(2 Punkte)**
-3. Schreibe GitHub Actions für: **(3 Punkte)**
-   * Continuous Integration
-   * Continuous Delivery (GitHub Packages)
-   * Continuous Deployment (GitHub Pages)
-4. Definiere alle nötigen Manifeste um das erstellte Image auf einem Kubernetes Cluster zu deployen **(5 Punkte)**
-5. Erkläre in eigenen Worten:
-   * Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
-   * Wofür ein Kubernetes Service gut ist **(2 Punkte)**
-   * Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
+
+   ### Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
+
+   NodePort
+     Zugriff auf einen Service von außerhalb des Kubernetes Clusters, indem ein spezifischer Port auf jedem Node im Cluster geöffnet wird
+
+   LoadBalancer
+     Einen externen Load Balancer der den Verkehr auf die Kubernetes Services verteilt
+      
+   Ingress
+    Für das Routing und die Verwaltung des externen Zugriffs auf deine Services innerhalb des Kubernetes Clusters
+    Durch Routing Regeln steuerbar
+
+
 
 ## Zusatzaufgabe:
 
 Definiere einen Kubernetes Job **(2 Punkte)**
+Siehe kurbernetes\Job.yaml 
