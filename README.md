@@ -1,6 +1,6 @@
 # Klausur 2023 DHBW HDH
 
-##Erkläre in eigenen Worten:
+## Erkläre in eigenen Worten:
    ###Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
 
 Automatische Verwaltung
@@ -13,7 +13,7 @@ Skalierung
    inzelne Pods kann man nicht scalen.
 
 
-   ###Wofür ein Kubernetes Service gut ist **(2 Punkte)**
+   ### Wofür ein Kubernetes Service gut ist **(2 Punkte)**
 
    Beständige Netzwerkadresse
     Man bekommt eine beständige Adresse für den Zugriff auf andere Pods, auch bei Neustarts oder Ersetzungen.
@@ -24,7 +24,7 @@ Skalierung
 
 
 
-   ###Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
+   ### Mehrere Wege wie man eine Kubernetes Anwendung von außen erreichen kann **(3 Punkte)**
 
    NodePort
      Zugriff auf einen Service von außerhalb des Kubernetes Clusters, indem ein spezifischer Port auf jedem Node im Cluster geöffnet wird
