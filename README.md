@@ -1,7 +1,7 @@
 # Klausur 2023 DHBW HDH
 
 ## Erkläre in eigenen Worten:
-   ###Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
+   ### Welche Vorteile ein Kubernetes Deployment gegenüber einem Kubernetes Pod hat **(2 Punkte)**
 
 Automatische Verwaltung
    Ein Deployment kümmert sich um die automatische Erstellung, Löschung und Aktualisierung der Pods. 
